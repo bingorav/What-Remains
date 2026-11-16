@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101112">
+  <meta name="description" content="WHAT REMAINS — a film by Gaurav Madan. A Himalayan village fractures under unseen forces.">
+  <title>WHAT REMAINS — A Film by Gaurav Madan</title>
+  <style>
+    :root{--bg:#101112;--panel:#191c1d;--ink:#f0efe9;--muted:#a7aaa8;--line:#34393a;--accent:#aebdb9;--max:1180px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 56px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(16,17,18,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-size:15px;font-weight:800;letter-spacing:.12em}
+    .brand small{display:block;font-size:9px;font-weight:400;letter-spacing:.18em;color:var(--muted);margin-top:2px}
+    nav{display:flex;gap:25px;font-size:10px;letter-spacing:.13em;color:var(--muted);text-transform:uppercase}
+    nav a:hover,.text-link:hover{color:var(--ink)}
+    .hero{display:grid;grid-template-columns:minmax(280px,.78fr) 1.22fr;gap:clamp(38px,7vw,100px);align-items:center;padding:76px 0 90px}
+    .poster-wrap{background:#17191a;padding:14px;box-shadow:0 24px 80px #0008}
+    .poster{display:block;width:100%;height:auto}
+    .eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700}
+    h1{font-size:clamp(54px,8vw,104px);line-height:.88;letter-spacing:-.065em;margin:22px 0 18px;font-weight:900}
+    .byline{font-size:12px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+    .logline{font-family:Georgia,serif;font-size:clamp(20px,2.1vw,27px);line-height:1.48;max-width:650px;margin:34px 0}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+    .button{display:inline-flex;align-items:center;justify-content:center;padding:16px 22px;background:var(--ink);color:var(--bg);font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);transition:.2s}
+    .button:hover{background:transparent;color:var(--ink)}
+    .button.secondary{background:transparent;color:var(--ink);border-color:#687171}
+    .meta{margin-top:28px;color:var(--muted);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+    section{padding:82px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:34px}
+    .section-head h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.045em;line-height:1.05;margin:12px 0 0}
+    .section-head p{color:var(--muted);font-size:12px;max-width:260px;margin:0}
+    .film-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:start}
+    .video{position:relative;aspect-ratio:16/9;background:#202526;overflow:hidden}
+    .video img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.68)}
+    .video .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border:1px solid #fff;border-radius:50%;display:grid;place-items:center;font-size:22px;color:white}
+    .video-note{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+    .synopsis{font-family:Georgia,serif;font-size:17px;line-height:1.85;color:#deded8}
+    .pullquote{font-size:11px;letter-spacing:.13em;line-height:1.6;color:var(--accent);border-top:1px solid var(--line);padding-top:18px;margin-top:28px;font-weight:700}
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .gallery figure{margin:0;overflow:hidden;background:var(--panel)}
+    .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+    .gallery figure:hover img{transform:scale(1.025)}
+    .gallery .wide{grid-column:span 7;aspect-ratio:16/9}
+    .gallery .narrow{grid-column:span 5;aspect-ratio:16/9}
+    .gallery .third{grid-column:span 4;aspect-ratio:4/3}
+    .statement{background:var(--panel);padding:clamp(28px,5vw,58px);display:grid;grid-template-columns:.55fr 1.45fr;gap:50px}
+    .statement h3{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:5px 0}
+    .statement p{font-family:Georgia,serif;font-size:17px;line-height:1.85;margin:0 0 18px;color:#e1e0d9}
+    .cast{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+    .cast div{border-top:1px solid var(--line);padding-top:15px}
+    .cast strong{display:block;font-size:14px;letter-spacing:.02em}
+    .cast span{display:block;font-size:10px;color:var(--muted);margin-top:5px;text-transform:uppercase;letter-spacing:.12em}
+    .credits{display:grid;grid-template-columns:1fr 1fr;gap:20px 50px;color:var(--muted);font-size:13px}
+    .credits p{margin:0;padding:13px 0;border-top:1px solid var(--line)}
+    .credits strong{color:var(--ink);font-weight:600}
+    .contact{display:flex;justify-content:space-between;align-items:end;gap:30px}
+    .contact h2{font-size:clamp(36px,5vw,66px);line-height:1;letter-spacing:-.05em;margin:14px 0}
+    .contact p{color:var(--muted);font-size:13px}
+    .email{font-size:clamp(16px,2vw,22px);border-bottom:1px solid #78827f;padding-bottom:6px}
+    footer{padding:28px 0 42px;border-top:1px solid var(--line);color:var(--muted);font-size:9px;letter-spacing:.15em;text-transform:uppercase;display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:760px){
+      .wrap{width:min(100% - 36px,560px)}
+      .nav{min-height:68px}nav{gap:12px;font-size:8px}nav a:nth-child(4){display:none}
+      .brand{font-size:13px}
+      .hero{grid-template-columns:1fr;gap:34px;padding:34px 0 60px}
+      .poster-wrap{width:min(76%,360px);margin:auto;padding:9px}
+      .hero-copy{text-align:left}
+      h1{font-size:clamp(56px,15vw,82px);margin:18px 0 12px}
+      .logline{font-size:21px;margin:25px 0}
+      section{padding:58px 0}
+      .section-head{display:block}.section-head p{margin-top:14px}
+      .film-grid{grid-template-columns:1fr;gap:30px}
+      .synopsis{font-size:16px}
+      .gallery{gap:8px}
+      .gallery .wide,.gallery .narrow{grid-column:span 12;aspect-ratio:16/9}
+      .gallery .third{grid-column:span 6;aspect-ratio:4/3}
+      .statement{grid-template-columns:1fr;gap:18px;padding:28px 22px}
+      .statement p{font-size:16px}
+      .cast{grid-template-columns:repeat(2,1fr);gap:18px}
+      .credits{grid-template-columns:1fr;gap:0}
+      .contact{display:block}.email{display:inline-block;margin-top:16px}
+      footer{display:block;line-height:2.2}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">WHAT REMAINS<small>A FILM BY GAURAV MADAN</small></a>
+    <nav aria-label="Main navigation">
+      <a href="#film">The film</a><a href="#gallery">Gallery</a><a href="#people">Cast & crew</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="poster-wrap"><img class="poster" src="assets/poster.jpg" alt="Official poster for What Remains"></div>
+    <div class="hero-copy">
+      <div class="eyebrow">Mazele Studios presents</div>
+      <h1>WHAT<br>REMAINS</h1>
+      <div class="byline">A film by Gaurav Madan</div>
+      <p class="logline">As a mountain village fractures under unseen forces, a man who believes language can save the earth and another who believes spectacle can sell it drive the village toward the same, irreversible disappearance.</p>
+      <div class="actions">
+        <!-- Replace the # below with the Vimeo video URL before publishing. -->
+        <a class="button" href="#trailer">Watch the trailer&nbsp; ↗</a>
+        <a class="button secondary" href="#film">Explore the film</a>
+      </div>
+      <div class="meta">India &nbsp;·&nbsp; Feature film &nbsp;·&nbsp; Nimoli, Himalayas</div>
+    </div>
+  </div>
+
+  <section id="film">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">The film</div><h2>A village chosen for revival.<br>A landscape moving towards disappearance.</h2></div>
+        <p>Between prayer and profit, belief and reason, the mountains keep their own counsel.</p>
+      </div>
+      <div class="film-grid">
+        <div id="trailer">
+          <!-- VIMEO EMBED: replace this image placeholder with the iframe supplied in README. -->
+          <div class="video">
+            <img src="assets/still-01.jpg" alt="Still from What Remains">
+            <div class="play" aria-hidden="true">▶</div>
+          </div>
+          <div class="video-note">Official trailer · Vimeo embed to be added</div>
+        </div>
+        <div>
+          <div class="eyebrow">Synopsis</div>
+          <p class="synopsis">In the remote Himalayan hamlet of Nimoli, an ancient whistling drifts through the mountains the villagers call the Triplets. When the government declares the village a Model Sanskrit Village, Pankul, a devoted Sanskrit teacher, returns home believing language can restore balance between land and people. But as the ground begins to crack and houses tilt, Harilal, an ambitious homestay owner, turns Nimoli’s slow collapse into a spectacle for tourists. A geoscientist’s warnings go unheard. Between prayer and profit, the village is gradually reclaimed by the mountains that once held it.</p>
+          <div class="pullquote">NOT EVERYTHING THAT BREAKS IS MEANT TO BE FIXED.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Fragments of Nimoli</div><h2>A place between prayer and profit.</h2></div>
+        <p>Images from the film</p>
+      </div>
+      <div class="gallery">
+        <figure class="wide"><img src="assets/still-02.jpg" alt="Film still from What Remains"></figure>
+        <figure class="narrow"><img src="assets/still-03.jpg" alt="Film still from What Remains"></figure>
+        <figure class="third"><img src="assets/still-04.jpg" alt="Film still from What Remains"></figure>
+        <figure class="third"><img src="assets/still-05.jpg" alt="Film still from What Remains"></figure>
+        <figure class="third"><img src="assets/still-06.jpg" alt="Film still from What Remains"></figure>
+        <figure class="wide"><img src="assets/still-07.jpg" alt="Film still from What Remains"></figure>
+        <figure class="narrow"><img src="assets/still-01.jpg" alt="Film still from What Remains"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap statement">
+      <h3>Director’s statement</h3>
+      <div>
+        <p>Nimoli was born from listening to places that are changing too slowly to be called disasters and too quickly to be called natural. Across the Himalayan region, villages tilt, roads fracture, and rivers shift course—not in moments of spectacle, but in long, almost polite gestures of withdrawal.</p>
+        <p>What interested me was not only the physical collapse of land, but the emotional and moral architectures that rise in response to it: belief, ambition, denial, and devotion.</p>
+        <p>The film unfolds around two men who appear to stand on opposite ends of a spectrum. Pankul believes language can restore balance between humans and the earth. Harilal believes in visibility—if a place can be seen, packaged, and sold, it can survive. Yet both are consumed by their vocations. Both refuse to listen when the land itself begins to speak.</p>
+        <p>Nimoli is not a film about solutions. It is about attention. About what we choose to hear, what we choose to ignore, and how entire landscapes can disappear while we remain fully occupied with our own ideas of saving them.</p>
+        <div class="byline">Gaurav Madan · Director</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="people">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">The people</div><h2>Cast</h2></div></div>
+      <div class="cast">
+        <div><strong>Prakash Jha</strong><span>Cast</span></div>
+        <div><strong>Ishwak Singh</strong><span>Cast</span></div>
+        <div><strong>Rakshit Bhuchar</strong><span>Cast</span></div>
+        <div><strong>Arushi Sharma</strong><span>Cast</span></div>
+        <div><strong>Geetika Vidya</strong><span>Cast</span></div>
+      </div>
+      <div style="height:54px"></div>
+      <div class="section-head"><div><div class="eyebrow">Production</div><h2>Key credits</h2></div></div>
+      <div class="credits">
+        <p><strong>Production company</strong><br>Mazele Studios</p>
+        <p><strong>Director</strong><br>Gaurav Madan</p>
+        <p><strong>Producers</strong><br>Yatin Gupta, Shubham Singh</p>
+        <p><strong>Executive producers</strong><br>Ravi Shankar Tiwari, Smriti Kiran</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div><div class="eyebrow">Industry enquiries</div><h2>Let’s talk<br>about the film.</h2><p>For sales, distribution, festival and industry enquiries.</p></div>
+      <a class="email" href="mailto:info@mazelestudios.com">info@mazelestudios.com ↗</a>
+    </div>
+  </section>
+</main>
+<footer class="wrap"><span>© Mazele Studios · WHAT REMAINS</span><span>A film by Gaurav Madan</span></footer>
+</body>
+</html>
